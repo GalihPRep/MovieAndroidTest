@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/bg"
+    tools:context=".page.movie.detail.MovieDetailActivity">
+
+        <ScrollView
+            android:id="@+id/detail_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="512dp">
+
+                    <ImageView
+                        android:id="@+id/detail_poster"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/poster"
+                        android:scaleType="centerCrop"
+                        tools:src="@tools:sample/backgrounds/scenic" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/detail_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="30dp">
+
+                    <TextView
+                        android:id="@+id/detail_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:textColor="@color/text_dark_bold"
+                        android:textSize="27sp"
+                        tools:text="Scum's Wish"/>
+
+                    <RelativeLayout
+                        android:id="@+id/detail_others"
+                        android:layout_below="@id/detail_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/detail_release_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:textColor="@color/text_dark_hint"
+                            android:textSize="16sp"
+                            tools:text="2048-09-16" />
+
+                        <RatingBar
+                            android:id="@+id/detail_rating_bar"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/detail_release_date"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:layout_marginEnd="10dp"
+                            android:progressBackgroundTint="@color/color200040"
+                            android:progressTint="@color/color200040"
+                            android:rating="3.0"
+                            android:secondaryProgressTint="@color/color200040"
+                            android:stepSize="0.1"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:id="@+id/detail_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/detail_rating_bar"
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:textColor="@color/text_dark_regular"
+                            android:textSize="16sp"
+                            tools:text="5.0"
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/detail_genres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/detail_others"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/comfortaa"
+                        android:textColor="@color/text_dark_regular"
+                        android:textSize="16sp"
+                        tools:text="Genres" />
+
+
+
+                    <TextView
+                        android:id="@+id/detail_overview_title"
+                        android:layout_below="@+id/detail_genres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:textColor="?attr/boldText"
+                        android:textSize="18sp"
+                        android:text="@string/overview"/>
+
+                    <TextView
+                        android:id="@+id/detail_overview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/detail_overview_title"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="30dp"
+                        android:fontFamily="@font/comfortaa"
+                        android:text="@string/overview"
+                        android:textColor="@color/text_dark_regular"
+                        android:textSize="14sp" />
+
+
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/detail_trailer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="30dp">
+                    <TextView
+                        android:id="@+id/detail_trailer_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/trailers"
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:textColor="@color/text_dark_bold"
+                        android:textSize="27sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/detail_trailer_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/detail_trailer_title"
+                        android:layout_marginTop="10dp"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/video_list_item"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/review_button"
+                    android:layout_width="243dp"
+                    android:layout_height="81dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginBottom="45dp"
+                    android:fontFamily="@font/comfortaa"
+                    android:text="@string/reviews"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="180dp"
+        android:layout_height="375dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/ic_card_white">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/box_poster"
+            android:layout_width="180dp"
+            android:layout_height="240dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/list_poster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    tools:src="@tools:sample/backgrounds/scenic"
+                    android:contentDescription="@string/poster"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/box_detail"
+            android:layout_below="@id/box_poster"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/list_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/list_genre"
+                android:ellipsize="end"
+                android:fontFamily="@font/comfortaa_bold"
+                android:maxLines="1"
+                android:textColor="?attr/boldText"
+                android:textSize="18sp"
+                tools:text="Scum's Wish" />
+
+            <TextView
+                android:id="@+id/list_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/list_release"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/comfortaa"
+                android:maxLines="1"
+                android:textColor="@color/text_dark_hint"
+                android:textSize="12sp"
+                tools:text="Love, Love, and Heartbreak" />
+
+            <RelativeLayout
+                android:id="@+id/list_release"
+                android:layout_above="@id/list_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/list_release_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comfortaa"
+                    android:textColor="@color/text_dark_hint"
+                    android:textSize="12sp"
+                    tools:text="16 September 2048" />
+
+                <TextView
+                    android:id="@+id/list_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:textColor="?attr/regularText"
+                    android:textSize="12sp"
+                    tools:text="En" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/list_rating"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+                <RatingBar
+                    android:id="@+id/detail_rating_bar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressBackgroundTint="@color/color200040"
+                    android:progressTint="@color/color200040"
+                    android:rating="3"
+                    android:secondaryProgressTint="@color/color200040"
+                    android:stepSize="0.1" />
+
+                <TextView
+                    android:id="@+id/detail_rating"
+                    android:layout_toEndOf="@+id/detail_rating_bar"
+                    android:layout_marginStart="4dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:textSize="16sp"
+                    android:textColor="?attr/boldText"
+                    tools:text="3"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

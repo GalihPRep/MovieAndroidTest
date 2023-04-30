@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Nameful7</string>
+    <string name="logo">Logo</string>
+    <string name="search_movie">Search Movie</string>
+    <string name="poster">Poster</string>
+    <string name="overview">Overview</string>
+    <string name="genres">Genres</string>
+    <string name="movies">Movies</string>
+    <string name="search">Search</string>
+    <string name="play_button">Play button</string>
+    <string name="trailers">Trailers</string>
+    <string name="reviews">See reviews</string>
+    <string name="search_hint">Enter the name</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color200040">#200040</color>
+    <color name="color202020">#202020</color>
+    <color name="color604080">#604080</color>
+    <color name="colorC04040">#9080c0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="nothing">#00FFFFFF</color>
+
+    <color name="bg_light">#FFFFFF</color>
+    <color name="bg_mid">#8040C0</color>
+    <color name="bg_dark">#000000</color>
+
+    <color name="text_dark_bold">#202020</color>
+    <color name="text_dark_regular">#604080</color>
+    <color name="text_dark_hint">#9080c0</color>
+    <color name="text_light_bold">#9080c0</color>
+    <color name="text_light_regular">#604080</color>
+    <color name="text_light_hint">#202020</color>
+
+    <color name="material_blue5p">#0D2196F3</color>
+
+    <attr format="color" name="card"/>
+    <attr format="color" name="bg"/>
+    <attr format="color" name="boldText"/>
+    <attr format="color" name="regularText"/>
+    <attr format="color" name="hintText"/>
+    <attr format="color" name="appbar"/>
+    <attr format="color" name="appbarAttribute"/>
+</resources>
