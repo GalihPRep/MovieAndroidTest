@@ -1,9 +1,7 @@
 package com.example.nameful7.model.response
 
 import android.os.Parcelable
-import com.example.nameful7.model.others.Movie
 import com.example.nameful7.model.others.Review
-import com.example.nameful7.model.others.Video
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 

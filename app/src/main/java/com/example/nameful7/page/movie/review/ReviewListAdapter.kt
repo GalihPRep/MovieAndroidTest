@@ -7,13 +7,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.nameful7.databinding.ReviewListItemBinding
-import com.example.nameful7.databinding.VideoListItemBinding
-import com.example.nameful7.model.others.AuthorDetails
 import com.example.nameful7.model.others.Review
-import com.example.nameful7.model.others.Video
 
 class ReviewListAdapter : RecyclerView.Adapter<ReviewViewHolder>(){
-    private lateinit var reviewOnClickListener: ReviewOnClickListener
     val differ = AsyncListDiffer(
         this,
         object :DiffUtil.ItemCallback<Review>(){
@@ -23,10 +19,6 @@ class ReviewListAdapter : RecyclerView.Adapter<ReviewViewHolder>(){
                     Boolean = oldItem.authorDetails == newItem.authorDetails
         }
     )
-
-    fun clickListener(reviewOnClickListener: ReviewOnClickListener){
-        this.reviewOnClickListener = reviewOnClickListener
-    }
 
 
 

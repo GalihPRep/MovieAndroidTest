@@ -78,16 +78,16 @@ class MovieByGenreListActivity : AppCompatActivity() {
 
     /**switching between pages*/
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
+        return when(item.itemId){
             R.id.action_switch_list -> {
                 val intent = Intent(
                     this@MovieByGenreListActivity,
                     GenreListActivity::class.java
                 )
                 startActivity(intent)
-                return true
+                true
             }
-            else -> return true
+            else -> true
         }
     }
 

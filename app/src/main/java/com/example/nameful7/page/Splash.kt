@@ -8,11 +8,11 @@ import com.example.nameful7.databinding.ActivitySplashBinding
 import com.example.nameful7.page.movie.list.MovieListActivity
 
 class Splash : AppCompatActivity() {
-    private var _binding: ActivitySplashBinding? = null
-    private val binding get() = _binding!!
+    private var bindingInitial: ActivitySplashBinding? = null
+    private val binding get() = bindingInitial!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivitySplashBinding.inflate(layoutInflater)
+        bindingInitial = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         Handler(mainLooper).postDelayed({
@@ -23,6 +23,6 @@ class Splash : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        _binding = null
+        bindingInitial = null
     }
 }
